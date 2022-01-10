@@ -1,0 +1,58 @@
+[
+	{
+		"id":1,
+		"Tutor":"Diosito Rey",
+		"Atencion1":{
+			"Dia":"Lunes",
+			"HoraInicio":"11 Am",
+			"HoraFinal":"1 Pm"
+			},
+		"Atencion2":{
+			"Dia":"Miercoles",
+			"HoraInicio":"3 Pm",
+			"HoraFinal":"5 Pm"
+			}
+	},
+	{
+		"id":2,
+		"Tutor":"Kelvin Lopez",
+		"Atencion1":{
+			"Dia":"Martes",
+			"HoraInicio":"12 Am",
+			"HoraFinal":"2 Pm"
+			},
+		"Atencion2":{
+			"Dia":"Jueves",
+			"HoraInicio":"5 Pm",
+			"HoraFinal":"10 Pm"
+			}
+	},
+	{
+		"id":3,
+		"Tutor":"Branley Yudeh",
+		"Atencion1":{
+			"Dia":"Viernes",
+			"HoraInicio":"8 Am",
+			"HoraFinal":"9 Pm"
+			},
+		"Atencion2":{
+			"Dia":"Sabado",
+			"HoraInicio":"10 Am",
+			"HoraFinal":"5 Pm"
+			}
+	},
+	{
+		"id":4,
+		"Tutor":"Manuel Pincay",
+		"Atencion1":{
+			"Dia":"Miercoles",
+			"HoraInicio":"10 Am",
+			"HoraFinal":"11 Pm"
+			},
+		"Atencion2":{
+			"Dia":"Domingo",
+			"HoraInicio":"11 Am",
+			"HoraFinal":"12 Pm"
+			}
+	}
+]
