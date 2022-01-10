@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> Formulario de los datos del documento</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <script src="JS/ValidacionesForms.js?v=<?php echo(rand()); ?>"></script>
+ 
+    </head>
+
+    <body>
+
+
+        <div class="contenedor">
+            <div class="principal">
+                <div class="header">
+                    
+                    <div class="titulo">
+                        <h1 class="text-center">Formulario Documento </h1>
+
+                       <h2 class="text-center">Datos  de registro del documento de titulacion</h2>
+
+                    </div>
+                </div>
+            </div>  
+
+            <div class="form">
+
+                <form id="formdoc"  method="POST"  enctype="multipart/form-data">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="FormsModalidad" [(ngModel)]="RegistroDocModel.modalidad" #FormsModalidad placeholder="Modalidad" >
+                    <label for="Modalidad">Modalidad de titulación</label>
+                  </div>
+                  
+                  <br>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="FormsTitulo" [(ngModel)]="RegistroDocModel.titulo" #FormsTitulo placeholder="Titulo" >
+                    <label for="Titulo"><Table>Titulo</Table></label>
+                  </div>
+                  <br>
+                <p>Documento: <input type="file" name="FormsDoc" [(ngModel)]="RegistroDocModel.archivo" #FormsDoc /></p> 
+                <p><script type="text/javascript">
+                    var d = new Date();
+                    var m = d.getMonth()+1;
+                    document.write('Fecha de entrega: ','<b>' +d.getDate()+'/'+m+'/'+d.getFullYear(),'</b>')
+                    </script>
+                </p>
+                  
+                <br>
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="FormsNumPaginas" [(ngModel)]="RegistroDocModel.pags" #FormsNumPaginas placeholder="Paginas" >
+                  <label for="paginas"><Table>Numero de paginas</Table></label>
+                </div>
+                
+                <br>
+                <div class="form-floating">
+                  <input type="text" class="form-control"name="FormsCampo" [(ngModel)]="RegistroDocModel.campo" #FormsCampo placeholder="CampoEstudio" >
+                  <label for="CampoEstudio"><Table>Campo de estudio</Table></label>
+                </div>
+                <br>
+                <p> Solicitado para título de:
+			    <input type="radio" [(ngModel)]="RegistroDocModel.grado" name="titulo" value="Pre-grado"> Pre-grado
+			    <input type="radio" [(ngModel)]="RegistroDocModel.grado" name="titulo" value="Post-grado"> Post-grado
+			    </p>
+                       
+                <p><input (click)="ValidacionFormsDoc(FormsModalidad, FormsTitulo, FormsDoc, FormsNumPaginas, FormsCampo)"  type="submit" value="Finalizar" /></p>
+			
+                
+            </form>
+            <p class="mt-5 mb-3 text-muted">&copy; The Backyardigans </p>
+            </div>
+
+
+        </div>
+    </body>
+</html>

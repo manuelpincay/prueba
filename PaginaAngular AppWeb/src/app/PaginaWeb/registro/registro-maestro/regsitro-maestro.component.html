@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> Formulario de datos del docente tutor</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="contenedor">
+            <div class="principal">
+                <div class="header">
+                    
+                    <div class="titulo">
+                        <h1 class="text-center"> Formulario Docente Tutor </h1>
+
+                       <h2 class="text-center">Datos  de registro del tutor designado</h2>
+                    </div>
+                </div>
+            </div>  
+            <div class="form">
+            <form id="formsmaestro"  >
+              
+              
+                <div class="form-floating">
+                  <input type="text" class="form-control" [(ngModel)]="RegistroMaeModel.nombres" #FormsNombre name="FormsNombre" placeholder="Nombres">
+                  <label for="Nombres">Nombres</label>
+                </div>
+                
+                <br>
+                <div class="form-floating">
+                  <input type="text" class="form-control" [(ngModel)]="RegistroMaeModel.apellidos" #FormsApellido name="FormsApellido" placeholder="Apellidos">
+                  <label for="Apellidos">Apellidos</label>
+                </div>
+                
+                <br>
+                <div class="form-floating">
+                  <input type="text" class="form-control"  [(ngModel)]="RegistroMaeModel.asignatura" #FormsAsignatura name="FormsAsignatura" placeholder="Asignatura">
+                  <label for="Asignatura">Asignatura</label>
+                </div>
+          
+                <br>
+                <div class="form-floating">
+                  <input type="email" class="form-control" [(ngModel)]="RegistroMaeModel.email" #Formsemail name="Formsemail" placeholder="ejemplo@hotmail.com">
+                  <label for="Correo">Correo institucional</label>
+                </div>
+
+                <br>
+                <div class="form-floating">
+                  <input type="text" class="form-control" [(ngModel)]="RegistroMaeModel.telf" #FormsTelefono name="FormsTelefono" placeholder="Telefono">
+                  <label for="telefono">Teléfono</label>
+                </div>
+                <br>
+
+                <div class="form-floating">
+                  <input type="text" class="form-control"[(ngModel)]="RegistroMaeModel.facul" #FormsFacultad name="FormsFacultad" placeholder="Facultad">
+                  <label for="Facultad">Facultad</label>
+                </div>
+                <br>
+                <p> Nivel de estudio:
+                <input type="radio"[(ngModel)]="RegistroMaeModel.titulos" #FormsSemestre name="titulos" value="Tercer nivel"> Tercer nivel
+                <input type="radio"[(ngModel)]="RegistroMaeModel.titulos" #FormsSemestre name="titulos" value="Cuarto nivel"> Cuarto nivel
+                </p>
+                <script type="text/javascript">
+                document.write("Nivel de estudio: ");
+                document.write("<select name=\"titulos\">");
+                document.write("<option value=\"Tercer nivel\">Tercer nivel</option>");
+                document.write("<option value=\"Cuarto nivel\">Cuarto nivel</option>");
+                document.write("</select>");
+                </script><br><br>
+               
+                
+                
+                <p><input type="submit" (click)="ValidacionFormsMaestro(FormsNombre, FormsApellido, FormsAsignatura, Formsemail, FormsTelefono, FormsFacultad)" value="Enviar" /></p>
+                </form>
+                <p class="mt-5 mb-3 text-muted">&copy; The Backyardigans </p>
+            </div> 
+
+        </div>
+    </body>
+</html>

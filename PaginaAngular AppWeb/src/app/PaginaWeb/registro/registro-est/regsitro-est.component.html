@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> Formulario de los datos del estudiante</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        
+
+    </head>
+
+    <body>
+        
+        <div class="contenedor">
+            <div class="principal">
+                <div class="header">
+                    
+                    <div class="titulo">
+                        <h1 class="text-center"> Formulario Estudiante </h1>
+
+                       <h5 class="text-center">Datos  de registro del Estudiante Universitario autor del documento de titulación</h5>
+                    </div>
+                </div>
+            </div> 
+
+        <div class="form">
+       <form id="formestudiante" action="/contacto" >
+       
+            
+              <div class="form-floating">
+                <input type="text" class="form-control" [(ngModel)]="RegistroEstModel.nombres" #FormsNombre name="FormsNombre" placeholder="Nombres">
+                <label for="Nombres">Nombres</label>
+              </div>
+              
+              <br>
+              <div class="form-floating">
+                <input type="text" class="form-control" [(ngModel)]="RegistroEstModel.apellidos" #FormsApellido name="FormsApellido" placeholder="Apellidos">
+                <label for="Apellidos">Apellidos</label>
+              </div>
+        
+              <br>
+              <div class="form-floating">
+                <input type="text" class="form-control" [(ngModel)]="RegistroEstModel.email" #Formsemail name="Formsemail" placeholder="ejemplo@hotmail.com">
+                <label for="email">Correo institucional</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="text" class="form-control" [(ngModel)]="RegistroEstModel.telf" #FormsTelefono name="FormsTelefono" placeholder="Telefono">
+                <label for="telefono">Teléfono</label>
+              </div>
+              <br>
+              
+            
+              <div class="form-floating">
+                <input type="text" class="form-control" [(ngModel)]="RegistroEstModel.facul" #FormsFacultad name="FormsFacultad" placeholder="Facultad">
+                <label for="facultad">Facultad</label>
+              </div>
+              
+              <br>
+              <div class="form-floating">
+                <input type="text" class="form-control"[(ngModel)]="RegistroEstModel.carrera" #FormsCarrera name="FormsCarrera" placeholder="Carrera">
+                <label for="Carrera">Carrera</label>
+              </div>
+              <br>
+              <p> Selecciona su semestre:
+        <input type="radio"[(ngModel)]="RegistroEstModel.semestre" #FormsSemestre name="semestre" value="Noveno"> Noveno
+        <input type="radio"[(ngModel)]="RegistroEstModel.semestre" #FormsSemestre name="semestre" value="Decimo"> Decimo
+        </p>
+              
+               
+               <p><input type="submit" (click)="ValidacionFormsEst(FormsNombre, FormsApellido, Formsemail, FormsTelefono, FormsFacultad, FormsCarrera, FormsSemestre)" value="Enviar" /></p>
+                
+                   
+            </form>
+
+            <p class="mt-5 mb-3 text-muted">&copy; The Backyardigans </p>
+
+        </div>
+    </div>
+
+    </body>
+</html>
